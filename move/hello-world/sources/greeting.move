@@ -27,4 +27,8 @@ module hello_world::greeting {
   public fun update_text(greeting: &mut Greeting, new_text: string::String) {
     greeting.text = new_text;
   }
+
+  public fun text(greeting: &Greeting): string::String {
+    greeting.text
+  }
 }
